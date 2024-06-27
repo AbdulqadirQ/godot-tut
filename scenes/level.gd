@@ -19,8 +19,8 @@ func _ready():
 	var size := get_viewport().get_visible_rect().size
 	var rng := RandomNumberGenerator.new()
 	for star in $Stars.get_children():
-		var random_x = rng.randi_range(0, size.x)
-		var random_y = rng.randi_range(0, size.y)
+		var random_x = rng.randi_range(0, int(size.x))
+		var random_y = rng.randi_range(0, int(size.y))
 		star.position = Vector2(random_x, random_y)
 		
 		# animation scale

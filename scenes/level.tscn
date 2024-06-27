@@ -46,7 +46,7 @@ texture = ExtResource("1_htsyt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stars"]
 sprite_frames = SubResource("SpriteFrames_x58no")
 autoplay = "default"
-frame_progress = 0.627198
+frame_progress = 0.315894
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Stars"]
 sprite_frames = SubResource("SpriteFrames_x58no")
