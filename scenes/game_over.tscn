@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://km2v8ljojjtc"]
+[gd_scene load_steps=3 format=3 uid="uid://km2v8ljojjtc"]
 
 [ext_resource type="FontFile" uid="uid://ddxh3tjq4muvh" path="res://audio/kenvector_future.ttf" id="1_4gxje"]
+[ext_resource type="Script" path="res://scenes/game_over.gd" id="1_8kc5w"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8kc5w")
 
 [node name="BG" type="ColorRect" parent="."]
 layout_mode = 1
