@@ -22,7 +22,13 @@ func _ready():
 		var random_x = rng.randi_range(0, size.x)
 		var random_y = rng.randi_range(0, size.y)
 		star.position = Vector2(random_x, random_y)
+		
+		# animation scale
+		var random_scale = rng.randf_range(1,2)
+		star.scale = Vector2(random_scale,random_scale)
 	
+		# animation speed
+		star.speed_scale = rng.randf_range(0.6,1.4)
 
 func _on_star_destroy_timer_timeout():
 	pass # Replace with function body.
