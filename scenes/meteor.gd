@@ -7,6 +7,16 @@ var direction_y: float
 
 func _ready():
 	var rng := RandomNumberGenerator.new()
+	var meteor_colour = ["Brown", "Grey"]
+	var meteor_size = ["big", "med", "small", "tiny"]
+	var path: String = "res://graphics/Meteors/meteor" \
+		+ str(meteor_colour[rng.randi_range(0, 1)]) \
+		+ "_" \
+		+ str(meteor_size[rng.randi_range(0, 3)]) \
+		+ str(rng.randi_range(1, 2)) + ".png"
+		
+	print(path)
+	$MeteorImage.texture = load(path)
 	
 	var width = get_viewport().get_visible_rect().size[0]
 	var random_x = rng.randi_range(0, width)
@@ -24,4 +34,3 @@ func _process(delta):
 
 func _on_body_entered(body):
 	print("Body collision: ", body)
-
