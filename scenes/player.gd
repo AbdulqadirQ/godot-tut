@@ -9,3 +9,4 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position += Vector2(1,0) * 10 * delta
+	$PlayerImage.rotation += 0.1 * delta
