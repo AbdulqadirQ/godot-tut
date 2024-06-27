@@ -1,8 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://duysr0f8d1tji"]
+[gd_scene load_steps=11 format=3 uid="uid://duysr0f8d1tji"]
 
 [ext_resource type="PackedScene" uid="uid://d3j74je1srfwe" path="res://scenes/player.tscn" id="1_52bgi"]
 [ext_resource type="Texture2D" uid="uid://cxcplmu7gedle" path="res://graphics/Backgrounds/darkPurple.png" id="1_htsyt"]
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_mvdge"]
+[ext_resource type="Texture2D" uid="uid://cr2cc0hlm1ddl" path="res://graphics/Effects/star1.png" id="3_st0j4"]
+[ext_resource type="Texture2D" uid="uid://cuqa5un5t2j3m" path="res://graphics/Effects/star2.png" id="4_n4q37"]
+[ext_resource type="Texture2D" uid="uid://clh2bm7ccy0n1" path="res://graphics/Effects/star3.png" id="5_wfetw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x58no"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_st0j4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n4q37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wfetw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ey3fe"]
 size = Vector2(50, 720)
@@ -20,6 +40,58 @@ script = ExtResource("1_mvdge")
 position = Vector2(639, 357)
 scale = Vector2(5.05469, 2.925)
 texture = ExtResource("1_htsyt")
+
+[node name="Stars" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_x58no")
+autoplay = "default"
+frame_progress = 0.288834
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_x58no")
+autoplay = "default"
+frame_progress = 0.833866
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_x58no")
+autoplay = "default"
+frame_progress = 0.833866
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_x58no")
+autoplay = "default"
+frame_progress = 0.833866
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_x58no")
+autoplay = "default"
+frame_progress = 0.833866
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_x58no")
+autoplay = "default"
+frame_progress = 0.833866
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_x58no")
+autoplay = "default"
+frame_progress = 0.833866
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_x58no")
+autoplay = "default"
+frame_progress = 0.833866
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_x58no")
+autoplay = "default"
+frame_progress = 0.833866
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_x58no")
+autoplay = "default"
+frame_progress = 0.833866
 
 [node name="Player" parent="." instance=ExtResource("1_52bgi")]
 position = Vector2(606, 371)
