@@ -16,4 +16,4 @@ func _process(delta):
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("shoot"):
-		laser.emit(position)
+		laser.emit($LaserStartPos.global_position)
