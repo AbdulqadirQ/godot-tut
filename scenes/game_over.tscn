@@ -43,7 +43,7 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_4gxje")
 theme_override_font_sizes/font_size = 30
-text = "Score 0"
+text = "Score: "
 horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

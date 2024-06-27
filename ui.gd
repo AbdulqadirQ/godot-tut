@@ -17,3 +17,4 @@ func set_health(amount):
 func _on_score_timer_timeout():
 	time_elapsed += 1
 	$MarginContainer/Label.text = str(time_elapsed)
+	Global.score = time_elapsed
