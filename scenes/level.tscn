@@ -7,8 +7,8 @@
 [node name="Level" type="Node2D"]
 
 [node name="BG" type="Sprite2D" parent="."]
-position = Vector2(587, 327)
-scale = Vector2(5.21875, 3.00781)
+position = Vector2(639, 357)
+scale = Vector2(5.05469, 2.925)
 texture = ExtResource("1_htsyt")
 
 [node name="meteor" parent="." instance=ExtResource("2_s0w8r")]
