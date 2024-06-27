@@ -1,11 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://duysr0f8d1tji"]
+[gd_scene load_steps=7 format=3 uid="uid://duysr0f8d1tji"]
 
 [ext_resource type="PackedScene" uid="uid://d3j74je1srfwe" path="res://scenes/player.tscn" id="1_52bgi"]
 [ext_resource type="Texture2D" uid="uid://cxcplmu7gedle" path="res://graphics/Backgrounds/darkPurple.png" id="1_htsyt"]
 [ext_resource type="PackedScene" uid="uid://vko8xop2ahgr" path="res://scenes/meteor.tscn" id="2_s0w8r"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xofsk"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ey3fe"]
 size = Vector2(50, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpqhj"]
+size = Vector2(50, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xofsk"]
+size = Vector2(1280, 50)
 
 [node name="Level" type="Node2D"]
 
@@ -18,12 +24,30 @@ texture = ExtResource("1_htsyt")
 position = Vector2(258, 155)
 
 [node name="Player" parent="." instance=ExtResource("1_52bgi")]
-position = Vector2(86, 306)
+position = Vector2(606, 371)
 
 [node name="Borders" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+[node name="StaticBodyBorderRight" type="StaticBody2D" parent="Borders"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D"]
-position = Vector2(1305, 360)
+[node name="BorderRightCollision" type="CollisionShape2D" parent="Borders/StaticBodyBorderRight"]
+position = Vector2(1305, 361)
+shape = SubResource("RectangleShape2D_ey3fe")
+
+[node name="StaticBodyBorderLeft" type="StaticBody2D" parent="Borders"]
+
+[node name="BorderLeftCollision" type="CollisionShape2D" parent="Borders/StaticBodyBorderLeft"]
+position = Vector2(-25, 359)
+shape = SubResource("RectangleShape2D_qpqhj")
+
+[node name="StaticBodyBorderTop" type="StaticBody2D" parent="Borders"]
+
+[node name="BorderTopCollision" type="CollisionShape2D" parent="Borders/StaticBodyBorderTop"]
+position = Vector2(641, -26)
+shape = SubResource("RectangleShape2D_xofsk")
+
+[node name="StaticBodyBorderBottom" type="StaticBody2D" parent="Borders"]
+
+[node name="BorderBottomCollision" type="CollisionShape2D" parent="Borders/StaticBodyBorderBottom"]
+position = Vector2(640, 745)
 shape = SubResource("RectangleShape2D_xofsk")

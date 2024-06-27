@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	position = Vector2(100,500)
+	position = Vector2(640,360)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

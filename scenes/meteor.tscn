@@ -2,7 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bffmjp6pjdkeu" path="res://graphics/Meteors/meteorBrown_big1.png" id="1_8o858"]
 
-[node name="meteor" type="Node2D"]
+[node name="meteor" type="Area2D"]
 
 [node name="MeteorImage" type="Sprite2D" parent="."]
 texture = ExtResource("1_8o858")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-33, -41, 22, -41, 48, -2, 33, 31, 10, 27, -21, 40, -49, 9)
