@@ -4,6 +4,7 @@ extends Node2D
 var meteor_scene: PackedScene = load("res://scenes/meteor.tscn")
 var laser_scene: PackedScene = load("res://scenes/laser.tscn")
 
+var health: int = 3
 
 func _on_meteor_timer_timeout():
 	var meteor = meteor_scene.instantiate()
@@ -13,7 +14,10 @@ func _on_meteor_timer_timeout():
 	
 
 func _on_meteor_collision():
-	print("Meteor collision in level")
+	health -= 1
+	print(health)
+	if health <= 0:
+		print("dead")
 
 
 func _on_player_laser(pos):
