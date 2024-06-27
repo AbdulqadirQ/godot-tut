@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://duysr0f8d1tji"]
+[gd_scene load_steps=12 format=3 uid="uid://duysr0f8d1tji"]
 
 [ext_resource type="PackedScene" uid="uid://d3j74je1srfwe" path="res://scenes/player.tscn" id="1_52bgi"]
 [ext_resource type="Texture2D" uid="uid://cxcplmu7gedle" path="res://graphics/Backgrounds/darkPurple.png" id="1_htsyt"]
@@ -6,8 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cr2cc0hlm1ddl" path="res://graphics/Effects/star1.png" id="3_st0j4"]
 [ext_resource type="Texture2D" uid="uid://cuqa5un5t2j3m" path="res://graphics/Effects/star2.png" id="4_n4q37"]
 [ext_resource type="Texture2D" uid="uid://clh2bm7ccy0n1" path="res://graphics/Effects/star3.png" id="5_wfetw"]
-[ext_resource type="FontFile" uid="uid://ddxh3tjq4muvh" path="res://audio/kenvector_future.ttf" id="7_ppuqi"]
-[ext_resource type="Texture2D" uid="uid://c382yui5u2f51" path="res://graphics/UI/playerLife1_red.png" id="8_8bhvv"]
+[ext_resource type="PackedScene" uid="uid://d4ekqroeyult3" path="res://ui.tscn" id="7_4e248"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x58no"]
 animations = [{
@@ -140,65 +139,7 @@ metadata/_edit_lock_ = true
 [node name="Lasers" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -74.5
-offset_right = 74.5
-offset_bottom = 57.0
-grow_horizontal = 2
-theme_override_constants/margin_top = 20
-
-[node name="Label" type="Label" parent="CanvasLayer/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.607843, 0.647059, 0, 1)
-theme_override_fonts/font = ExtResource("7_ppuqi")
-theme_override_font_sizes/font_size = 50
-text = "1234"
-horizontal_alignment = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 185.0
-grow_vertical = 0
-rotation = 0.00193198
-theme_override_constants/margin_left = 10
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer2"]
-layout_mode = 2
-theme_override_constants/separation = 5
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("8_8bhvv")
-stretch_mode = 2
-
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("8_8bhvv")
-stretch_mode = 2
-
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("8_8bhvv")
-stretch_mode = 2
-
-[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("8_8bhvv")
-stretch_mode = 2
-
-[node name="TextureRect5" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("8_8bhvv")
-stretch_mode = 2
+[node name="UI" parent="." instance=ExtResource("7_4e248")]
 
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
