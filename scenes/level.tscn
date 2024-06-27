@@ -27,24 +27,28 @@ position = Vector2(606, 371)
 [node name="Borders" type="Node2D" parent="."]
 
 [node name="StaticBodyBorderRight" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
 
 [node name="BorderRightCollision" type="CollisionShape2D" parent="Borders/StaticBodyBorderRight"]
 position = Vector2(1305, 361)
 shape = SubResource("RectangleShape2D_ey3fe")
 
 [node name="StaticBodyBorderLeft" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
 
 [node name="BorderLeftCollision" type="CollisionShape2D" parent="Borders/StaticBodyBorderLeft"]
 position = Vector2(-25, 359)
 shape = SubResource("RectangleShape2D_qpqhj")
 
 [node name="StaticBodyBorderTop" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
 
 [node name="BorderTopCollision" type="CollisionShape2D" parent="Borders/StaticBodyBorderTop"]
 position = Vector2(641, -26)
 shape = SubResource("RectangleShape2D_xofsk")
 
 [node name="StaticBodyBorderBottom" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
 
 [node name="BorderBottomCollision" type="CollisionShape2D" parent="Borders/StaticBodyBorderBottom"]
 position = Vector2(640, 745)

@@ -6,6 +6,8 @@
 size = Vector2(8, 56)
 
 [node name="Laser" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_uqj4g")
