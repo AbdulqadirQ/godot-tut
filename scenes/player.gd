@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed := 500
+var can_shoot: bool = true
 
 signal laser(pos)
 
@@ -15,5 +16,11 @@ func _process(delta):
 	velocity = direction * speed
 	move_and_slide()
 	
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and can_shoot:
 		laser.emit($LaserStartPos.global_position)
+		can_shoot = false
+		$LaserCoolDown.start()
+
+
+func _on_laser_cool_down_timeout():
+	can_shoot = true

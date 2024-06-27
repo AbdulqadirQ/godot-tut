@@ -17,3 +17,9 @@ polygon = PackedVector2Array(-9, -37, 8, -38, 11, -12, 36, 4, 40, 0, 48, -7, 46,
 [node name="LaserStartPos" type="Marker2D" parent="."]
 position = Vector2(0, -47)
 gizmo_extents = 158.1
+
+[node name="LaserCoolDown" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="LaserCoolDown" to="." method="_on_laser_cool_down_timeout"]
