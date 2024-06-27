@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://km2v8ljojjtc"]
 
-[ext_resource type="FontFile" uid="uid://ddxh3tjq4muvh" path="res://audio/kenvector_future.ttf" id="1_txd6w"]
+[ext_resource type="FontFile" uid="uid://ddxh3tjq4muvh" path="res://audio/kenvector_future.ttf" id="1_4gxje"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -32,14 +32,14 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_txd6w")
+theme_override_fonts/font = ExtResource("1_4gxje")
 theme_override_font_sizes/font_size = 105
 text = "Game Over"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_txd6w")
+theme_override_fonts/font = ExtResource("1_4gxje")
 theme_override_font_sizes/font_size = 30
 text = "Score 0"
 horizontal_alignment = 1
@@ -60,6 +60,6 @@ theme_override_constants/margin_bottom = 20
 
 [node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_txd6w")
+theme_override_fonts/font = ExtResource("1_4gxje")
 theme_override_font_sizes/font_size = 26
 text = "PRESS SPACE TO START AGAIN"

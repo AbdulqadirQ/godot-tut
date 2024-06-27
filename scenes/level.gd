@@ -17,7 +17,7 @@ func _on_meteor_collision():
 	health -= 1
 	get_tree().call_group("ui", "set_health", health)
 	if health <= 0:
-		print("dead")
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
 
 func _on_player_laser(pos):
