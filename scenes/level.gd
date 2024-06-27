@@ -26,6 +26,9 @@ func _on_player_laser(pos):
 	laser.position = pos
 
 func _ready():
+	# setup up health ui
+	get_tree().call_group("ui", "set_health", health)
+	
 	var size := get_viewport().get_visible_rect().size
 	var rng := RandomNumberGenerator.new()
 	for star in $Stars.get_children():
