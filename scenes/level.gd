@@ -15,7 +15,7 @@ func _on_meteor_timer_timeout():
 
 func _on_meteor_collision():
 	health -= 1
-	print(health)
+	get_tree().call_group("ui", "set_health", health)
 	if health <= 0:
 		print("dead")
 

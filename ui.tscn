@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4ekqroeyult3"]
+[gd_scene load_steps=4 format=3 uid="uid://d4ekqroeyult3"]
 
+[ext_resource type="Script" path="res://ui.gd" id="1_2g2g5"]
 [ext_resource type="FontFile" uid="uid://ddxh3tjq4muvh" path="res://audio/kenvector_future.ttf" id="1_7f6ir"]
 [ext_resource type="Texture2D" uid="uid://c382yui5u2f51" path="res://graphics/UI/playerLife1_red.png" id="2_rmf05"]
 
-[node name="UI" type="CanvasLayer"]
+[node name="UI" type="CanvasLayer" groups=["ui"]]
+script = ExtResource("1_2g2g5")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 5
