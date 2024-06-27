@@ -5,6 +5,8 @@ var rotation_speed: int
 var direction_x: float
 var direction_y: float
 
+signal collision
+
 func _ready():
 	var rng := RandomNumberGenerator.new()
 	var meteor_colour = ["Brown", "Grey"]
@@ -33,4 +35,4 @@ func _process(delta):
 	rotation_degrees += rotation_speed * delta
 
 func _on_body_entered(body):
-	print("Body collision: ", body)
+	collision.emit()

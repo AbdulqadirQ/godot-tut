@@ -8,6 +8,12 @@ var laser_scene: PackedScene = load("res://scenes/laser.tscn")
 func _on_meteor_timer_timeout():
 	var meteor = meteor_scene.instantiate()
 	$Meteors.add_child(meteor)
+	
+	meteor.connect("collision", _on_meteor_collision)
+	
+
+func _on_meteor_collision():
+	print("Meteor collision in level")
 
 
 func _on_player_laser(pos):
@@ -29,6 +35,3 @@ func _ready():
 	
 		# animation speed
 		star.speed_scale = rng.randf_range(0.6,1.4)
-
-func _on_star_destroy_timer_timeout():
-	pass # Replace with function body.
