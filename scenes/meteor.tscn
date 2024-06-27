@@ -12,5 +12,6 @@ script = ExtResource("1_ebq4j")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-33, -41, 22, -41, 48, -2, 33, 31, 10, 27, -21, 40, -49, 9)
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="draw" from="MeteorImage" to="." method="_on_meteor_image_draw"]
