@@ -3,9 +3,12 @@
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_pnm1s"]
 [ext_resource type="Texture2D" uid="uid://brunh100je3nl" path="res://graphics/ship/playerShip1_red.png" id="1_synhe"]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(-6, 6)
 script = ExtResource("1_pnm1s")
 
 [node name="PlayerImage" type="Sprite2D" parent="."]
 texture = ExtResource("1_synhe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-9, -37, 8, -38, 11, -12, 36, 4, 40, 0, 48, -7, 46, 25, 40, 21, 14, 27, 8, 38, -8, 37, -16, 27, -41, 21, -46, 26, -51, -5, -45, -8, -42, -2, -37, 1, -13, -12)
