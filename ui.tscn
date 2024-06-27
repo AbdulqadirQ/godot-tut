@@ -22,7 +22,7 @@ size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0.607843, 0.647059, 0, 1)
 theme_override_fonts/font = ExtResource("1_7f6ir")
 theme_override_font_sizes/font_size = 50
-text = "1234"
+text = "0"
 horizontal_alignment = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
@@ -38,3 +38,8 @@ theme_override_constants/margin_left = 10
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2"]
 layout_mode = 2
 theme_override_constants/separation = 5
+
+[node name="ScoreTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
