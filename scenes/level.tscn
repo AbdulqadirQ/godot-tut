@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://duysr0f8d1tji"]
+[gd_scene load_steps=8 format=3 uid="uid://duysr0f8d1tji"]
 
 [ext_resource type="PackedScene" uid="uid://d3j74je1srfwe" path="res://scenes/player.tscn" id="1_52bgi"]
 [ext_resource type="Texture2D" uid="uid://cxcplmu7gedle" path="res://graphics/Backgrounds/darkPurple.png" id="1_htsyt"]
+[ext_resource type="Script" path="res://scenes/level.gd" id="1_mvdge"]
 [ext_resource type="PackedScene" uid="uid://vko8xop2ahgr" path="res://scenes/meteor.tscn" id="2_s0w8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ey3fe"]
@@ -14,6 +15,7 @@ size = Vector2(50, 720)
 size = Vector2(1280, 50)
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_mvdge")
 
 [node name="BG" type="Sprite2D" parent="."]
 position = Vector2(639, 357)
@@ -51,3 +53,8 @@ shape = SubResource("RectangleShape2D_xofsk")
 [node name="BorderBottomCollision" type="CollisionShape2D" parent="Borders/StaticBodyBorderBottom"]
 position = Vector2(640, 745)
 shape = SubResource("RectangleShape2D_xofsk")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
