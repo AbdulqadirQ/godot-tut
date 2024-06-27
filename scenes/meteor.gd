@@ -37,9 +37,9 @@ func _process(delta):
 func _on_body_entered(_body):
 	collision.emit()
 
-
 func _on_area_entered(area):
 	# get rid of meteor
 	area.queue_free()
 	# get rid of laser
 	queue_free()
+	Global.score += 10
