@@ -15,6 +15,7 @@ func _on_meteor_timer_timeout():
 
 func _on_meteor_collision():
 	health -= 1
+	$Player.play_collision_sound()
 	get_tree().call_group("ui", "set_health", health)
 	if health <= 0:
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")

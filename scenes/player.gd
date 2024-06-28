@@ -22,6 +22,8 @@ func _process(_delta):
 		$LaserCoolDown.start()
 		$LaserSound.play()
 
+func play_collision_sound():
+	$CollisionSound.play()
 
 func _on_laser_cool_down_timeout():
 	can_shoot = true
