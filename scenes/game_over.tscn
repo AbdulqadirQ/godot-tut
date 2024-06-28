@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://km2v8ljojjtc"]
+[gd_scene load_steps=4 format=3 uid="uid://km2v8ljojjtc"]
 
 [ext_resource type="FontFile" uid="uid://ddxh3tjq4muvh" path="res://audio/kenvector_future.ttf" id="1_4gxje"]
 [ext_resource type="Script" path="res://scenes/game_over.gd" id="1_8kc5w"]
+[ext_resource type="AudioStream" uid="uid://cdnw22mig2e3c" path="res://audio/sfx_lose.ogg" id="3_ku8bm"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -65,3 +66,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_4gxje")
 theme_override_font_sizes/font_size = 26
 text = "PRESS SPACE TO START AGAIN"
+
+[node name="GameOverSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ku8bm")

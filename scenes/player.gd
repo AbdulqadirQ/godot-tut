@@ -20,6 +20,7 @@ func _process(_delta):
 		laser.emit($LaserStartPos.global_position)
 		can_shoot = false
 		$LaserCoolDown.start()
+		$LaserSound.play()
 
 
 func _on_laser_cool_down_timeout():
